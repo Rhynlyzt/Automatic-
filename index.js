@@ -325,7 +325,7 @@ async function accountLogin(state, enableCommands = [], prefix, admin = []) {
 
 					axios.get(gifUrl, { responseType: 'arraybuffer' })
 					.then(response => {
-					fs.writeFileSync(gifPath, response.data);					  return api.sendMessage(`🔴🟢🟡\n\n✅ 𝗚𝗥𝗢𝗨𝗣 𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗜𝗢𝗡 𝗦𝗨𝗖𝗖𝗘𝗦! \n➭ Bot Prefix: ${prefix}\n➭ Admin: ‹joshua Apostol›\n➭ Facebook: ‹https://www.facebook.com/profile.php?id=100088690249020›\n➭ Use ${prefix}help to view command details\n➭ Added bot at: ⟨ ${time} ⟩〈 ${thu} 〉`, event.threadID,
+					fs.writeFileSync(gifPath, response.data);					  return api.sendMessage(`🎉🎉🎉\n\n✅ 𝗚𝗥𝗢𝗨𝗣 𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗜𝗢𝗡 𝗦𝗨𝗖𝗖𝗘𝗦! \n➭ Bot Prefix: ${prefix}\n➭ Admin: ‹${admin}›\n➭ Facebook: ‹https://www.facebook.com/${admin}›\n➭ Use ${prefix}help to view command details\n➭ Added bot at: ⟨ ${time} ⟩〈 ${thu} 〉`, event.threadID,
 					);
 					})
 					.catch(error => {
@@ -559,7 +559,7 @@ async function accountLogin(state, enableCommands = [], prefix, admin = []) {
 																	const result = await getFBInfo(url);
 																	let videoData = await axios.get(encodeURI(result.sd), { responseType: 'arraybuffer' });
 																	fs.writeFileSync(fbvid, Buffer.from(videoData.data, "utf-8"));
-																	return api.sendMessage({ body: "𝖠𝗎𝗍𝗈 𝖣𝗈𝗐𝗇 𝖥𝖺𝖼𝖾𝖻𝗈𝗈𝗄 𝖵𝗂𝖽𝖾𝗈\n\n🇯​​​​​🇴​​​​​🇸​​​​​🇭​​​​​ 🇧​​​​​🇴​​​​​🇹​​​​​", attachment: fs.createReadStream(fbvid) }, event.threadID, () => fs.unlinkSync(fbvid));
+																	return api.sendMessage({ body: "𝖠𝗎𝗍𝗈 𝖣𝗈𝗐𝗇 𝖥𝖺𝖼𝖾𝖻𝗈𝗈𝗄 𝖵𝗂𝖽𝖾𝗈\n\n🇧​​​​​🇴​​​​​🇹​​​​​", attachment: fs.createReadStream(fbvid) }, event.threadID, () => fs.unlinkSync(fbvid));
 																}
 																catch (e) {
 																	return console.log(e);
