@@ -1,14 +1,14 @@
 const axios = require('axios');
 
 module.exports.config = {
-    name: "ai2",
+    name: "ai",
     version: "1.0.0",
     hasPermission: 0,
     credits: "ai",//api by jerome
     description: "Gpt architecture",
     usePrefix: false,
     commandCategory: "GPT4",
-    cooldowns: 5,
+    cooldowns: 3,
 };
 
 module.exports.run = async function ({ api, event, args }) {
