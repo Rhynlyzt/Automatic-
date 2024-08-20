@@ -1,7 +1,7 @@
 const { TempMail } = require("1secmail-api");
 
 module.exports.config = {
-  name: "tempm",
+  name: "tempmail",
   version: "1.0.0",
   role: 0,
   hasPrefix: false,
