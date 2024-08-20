@@ -26,7 +26,7 @@ module.exports.handleEvent = async function ({ api, event }) {
 
         const background = groupInfo.imageSrc || "https://i.ibb.co/4YBNyvP/images-76.jpg"; // Use group image if available, otherwise default background
 
-        const url = `https://ggwp-ifzt.onrender.com//welcome?name=${encodeURIComponent(name)}&groupname=${encodeURIComponent(groupName)}&groupicon=${encodeURIComponent(groupIcon)}&member=${memberCount}&uid=${senderID}&background=${encodeURIComponent(background)}`;
+        const url = `https://deku-rest-api-3jvu.onrender.com//welcome?name=${encodeURIComponent(name)}&groupname=${encodeURIComponent(groupName)}&groupicon=${encodeURIComponent(groupIcon)}&member=${memberCount}&uid=${senderID}&background=${encodeURIComponent(background)}`;
 
         try {
             const { data } = await axios.get(url, { responseType: 'arraybuffer' });
