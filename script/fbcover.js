@@ -41,7 +41,7 @@ module.exports.run = async function({ api, event, args }) {
         writer.on('finish', async () => {
             try {
 
-                const apiUrl = `https://ggwp-ifzt.onrender.com/canvas/fbcoverv7?uid=${event.senderID}&name=${encodeURIComponent(name)}&gender=${encodeURIComponent(gender)}&birthday=${encodeURIComponent(birthday)}&love=${encodeURIComponent(love)}&follower=${encodeURIComponent(follower)}&location=${encodeURIComponent(location)}&hometown=${encodeURIComponent(hometown)}`;
+                const apiUrl = `https://deku-rest-api-3jvu.onrender.com/fbcoverv7?uid=${event.senderID}&name=${encodeURIComponent(name)}&gender=${encodeURIComponent(gender)}&birthday=${encodeURIComponent(birthday)}&love=${encodeURIComponent(love)}&follower=${encodeURIComponent(follower)}&location=${encodeURIComponent(location)}&hometown=${encodeURIComponent(hometown)}`;
 
                 api.sendMessage("Generating Facebook cover photo, please wait...", event.threadID);
 
