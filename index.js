@@ -123,8 +123,8 @@ const routes = [{
   path: '/online_user',
   file: 'online.html'
 }, ];
-  path: '/Developer',
-  file: 'Developer.html'
+  path: '/developer',
+  file: 'developer.html'
 }, ];
 routes.forEach(route => {
   app.get(route.path, (req, res) => {
