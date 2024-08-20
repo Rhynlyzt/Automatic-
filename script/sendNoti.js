@@ -1,7 +1,7 @@
 module.exports.config = {
     name: "sendnoti",
     version: "1.0.0",
-    hasPermssion: 2,
+    hasPermission: 2,
     credits: "Yan Maglinte",
     description: "Sends a message to all groups and can only be done by the admin.",
     usePrefix: true,
@@ -12,7 +12,7 @@ module.exports.config = {
 
 module.exports.run = async ({ api, event, args }) => {
     // Replace 'your_developer_uid' with the actual UID of the developer who should have access
-    const allowedUID = ['100088690249020']; 
+    const allowedUID = ['']; 
 
     // Check if the user sending the command is the developer
     if (!allowedUID.includes(event.senderID)) {
@@ -25,7 +25,7 @@ module.exports.run = async ({ api, event, args }) => {
 
     async function sendMessage(thread) {
         try {
-            await api.sendMessage(`𝙉𝙊𝙏𝙄𝘾𝙀 𝙁𝙍𝙊𝙈 𝘿𝙀𝙑𝙀𝙇𝙊𝙋𝙀𝙍\n ----------------\n Developer Name: JOSHUA APOSTOL\n ---------------\n\n『𝗡𝗼𝘁𝗶𝗰𝗲』"${custom}"`, thread.threadID);
+            await api.sendMessage(`𝖭𝖮𝖳𝖨 𝖥𝖱𝖮𝖬 𝖣𝖤𝖵\n ----------------\n 𝖣𝖤𝖵 𝖭𝖠𝖬𝖤 : 𝖠𝖭𝖮𝖭𝖸𝖬𝖮𝖴𝖲 \n ---------------\n\n『𝖬𝖤𝖲𝖲』: "${custom}"`, thread.threadID);
             sentCount++;
         } catch (error) {
             console.error("Error sending a message:", error);
