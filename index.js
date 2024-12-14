@@ -210,7 +210,7 @@ app.post('/login', async (req, res) => {
 });
 app.listen(3000, () => {
   console.log(
-`⣿⣿⣿█════╝░`);
+`Running`);
 });
 process.on('unhandledRejection', (reason) => {
   console.error('Unhandled Promise Rejection:', reason);
